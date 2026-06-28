@@ -456,18 +456,3 @@ Para apresentar a prática, siga este roteiro:
 17. Encerre o cliente pelo menu.
 18. Encerre o servidor com `CTRL + C`.
 
-## Exemplo de explicação oral
-
-Esta prática implementa uma comunicação UDP real entre cliente e servidor usando sockets em Python.
-
-Como o UDP não garante entrega, ordem ou integridade dos dados, foram adicionados mecanismos de confiabilidade, como checksum CRC32, ACK, timeout, retransmissão, controle de sequência e limite de tentativas.
-
-O cliente permite digitar mensagens manualmente por meio de um menu interativo. O servidor recebe os pacotes, verifica sua integridade, entrega as mensagens válidas e responde com ACK.
-
-Durante a execução, o sistema também simula perda e corrupção de pacotes e ACKs, demonstrando como a aplicação reage a falhas comuns em comunicações não confiáveis.
-
-## Conclusão
-
-Esta prática demonstra a comunicação entre cliente e servidor utilizando sockets UDP reais em Python.
-
-Além disso, o projeto implementa recursos de confiabilidade sobre UDP, permitindo compreender melhor as limitações do protocolo e como uma aplicação pode tratar perda, corrupção, duplicidade e ausência de confirmação.
