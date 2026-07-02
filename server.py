@@ -318,6 +318,22 @@ def main() -> None:
 
                 show_received_packet(packet, client_address)
 
+# ============================================================
+# SIMULAÇÃO DE PERDA DE PACOTE DATA NO SERVIDOR
+# ============================================================
+
+if random_generator.random() < SERVER_DATA_DROP_RATE:
+    subtitle("SIMULAÇÃO DE PERDA DE PACOTE")
+
+    log("SIMULAÇÃO", "Pacote DATA chegou ao servidor.")
+    log("SIMULAÇÃO", "O pacote foi descartado propositalmente.")
+    log("SIMULAÇÃO", "Nenhum ACK será enviado ao cliente.")
+    log("PROTOCOLO", "O cliente deverá detectar timeout e retransmitir.")
+
+    show_server_status(expected_seq, last_valid_ack)
+
+    continue
+
                 subtitle("VERIFICAÇÃO DE INTEGRIDADE")
 
                 log("SERVIDOR", "Verificando integridade do pacote com CRC32.")
