@@ -18,6 +18,9 @@ BUFFER_SIZE = 4096
 ACK_LOSS_RATE = 0.20
 ACK_CORRUPTION_RATE = 0.15
 
+# Simula perda do pacote DATA após chegar ao servidor
+SERVER_DATA_DROP_RATE = 0.20
+
 random_generator = random.Random(7)
 
 LINE_SIZE = 72
